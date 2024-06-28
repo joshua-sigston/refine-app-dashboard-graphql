@@ -6,6 +6,7 @@ import { useNotificationProvider } from '@refinedev/antd';
 import '@refinedev/antd/dist/reset.css';
 
 import { authProvider, dataProvider, liveProvider } from './providers';
+import { ForgotPassword, Home, Login, Register } from './pages';
 
 // import dataProvider, {
 //   GraphQLClient,
@@ -42,6 +43,10 @@ function App() {
             >
               <Routes>
                 <Route index element={<WelcomePage />} />
+                <Route index element={<Home />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/forgotPassword" element={<ForgotPassword />} />
               </Routes>
               <RefineKbar />
               <UnsavedChangesNotifier />
